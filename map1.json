@@ -1,0 +1,42 @@
+{
+  "rooms":[
+  {
+    "id":"room1",
+    "desc":"On the wall are these words in red: KILL ALL MONSTERS OR DIE. There is a door to the east.",
+    "e":"room2",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["gun"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"room2",
+    "desc":"You are in another room.",
+    "e":"",
+    "s":"",
+    "w":"room1",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":0
+  } 
+  ],
+  "ob":{
+  "gun":["It is not that good, but it definetly kill's.", "noteatable", -80, "noncon"]
+  },
+  
+  "enemies":[
+  {
+    "id":"zombie",
+    "initialroom":"room2",
+    "killedby":["gun"]
+  }
+  ],
+  "player":{
+	"time":0,
+    "initialroom":"room1"
+  }
+  
+}

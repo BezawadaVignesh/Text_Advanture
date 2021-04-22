@@ -1,0 +1,99 @@
+{
+  "rooms":[
+  {
+    "id":"lobby",
+    "desc":"A sign on a wall says 'I know that's not how you kill that big guy, your lecturer just didn't have time to make up another story.' You have no idea what it is talking about. There is a door to the south. Be carefull some rooms take damage from you.",
+    "e":"",
+    "s":"gunroom",
+    "w":"",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":-10
+  },
+  {
+    "id":"gunroom",
+    "desc":"You thought you walked south into this room, but the door behind you disappear immediately after you walked through! There is another door to the south.",
+    "e":"",
+    "s":"catroom",
+    "w":"",
+    "n":"",
+    "obj":["gun","bullet", "catkey"],
+	"key":[],
+	"health":-10
+  },
+  {
+    "id":"catroom",
+    "desc":"Again, it seems you can't walk back to the room you came from. There is a door to the south.",
+    "e":"",
+    "s":"architect",
+    "w":"",
+    "n":"",
+    "obj":["cat","red gem"],
+	"key":["catkey"],
+	"health":-10
+  },
+  {
+    "id":"architect",
+    "desc":"You are in a white room with many TV screens. An old man turns around and says 'I am the architect...' he goes on to speak in a very monotone voice and with many unnecessarily complex words so I'll skip all that. Anyway there are two doors, one to the east and one to the west.",
+    "e":"agentroom",
+    "s":"",
+    "w":"lobby",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":-10
+  },
+  {
+    "id":"agentroom",
+    "desc":"There is a door to the east.",
+    "e":"titan",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["green gem"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"titan",
+    "desc":"This room has no exit. Something tells you that what's in front of you must be the big bad.",
+    "e":"",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["blue gem"],
+	"key":[],
+	"health":0
+  }
+  ],
+  "ob":{
+  "gun":["It is not that good, but it definetly kill's.", "noteatable", -50, "noncon"],
+  "bullet":["They can be loded to gun, and kill enemies.", "noteatable", -30, "con"],
+  "apple":["It is an ordinery, it gives you instant energy.", "eatable", 30, "con"],
+  "blue gem":["Powerfull gem which used to kill enemies.", "noteatable", -70, "con"],
+  "green gem":["Powerfull gem which used to kill enemies.", "noteatable", -70, "con"],
+  "cat":["It's just a cat.", "noteatable", -70, "con"],
+  "red gem":["Powerfull gem which used to kill enemies.", "noteatable", -70, "con"],
+  "catkey":["The key which is used to open catroom catkey", "noteatable", -70, "con"]
+  },
+  "enemies":[
+  {
+    "id":"agent",
+    "initialroom":"agentroom",
+    "killedby":["gun","bullet"],
+	"move":"true"
+  },
+  {
+    "id":"big guy",
+    "initialroom":"titan",
+    "killedby":["red gem","green gem","blue gem"],
+	"move":"false"
+  }
+  ],
+  "player":{
+	"time":0,
+    "initialroom":"lobby"
+  }
+}
+

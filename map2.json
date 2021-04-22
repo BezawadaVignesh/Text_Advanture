@@ -1,0 +1,64 @@
+{
+  "rooms":[
+  {
+    "id":"room1",
+    "desc":"There is a door to the east.",
+    "e":"room2",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["gun"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"room2",
+    "desc":"You are in another room. There is a door to the north.",
+    "e":"",
+    "s":"",
+    "w":"room1",
+    "n":"room3",
+    "obj":["bullet","apple"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"room3",
+    "desc":"There is another door to the north.",
+    "e":"",
+    "s":"room2",
+    "w":"",
+    "n":"room4",
+    "obj":["silver bullet"],
+	"key":[],
+	"health":0
+  }
+  ],
+  "ob":{
+  "gun":["It is not that good, but it definetly kill's.", "noteatable", -50, "noncon"],
+  "bullet":["They can be loded to gun, and kill enemies.", "noteatable", -30, "con"],
+  "silver bullet":["These bullets are used to kill werewolf", "noteatable", -90, "con"],
+  "apple":["It is an ordinery, it gives you instant energy.", "eatable", 30, "con"]
+  },
+  "enemies":[
+ 
+  {
+    "id":"zombie",
+    "initialroom":"room3",
+    "killedby":["gun","bullet"],
+	"move":"true"
+  },
+  {
+    "id":"werewolf",
+    "initialroom":"room4",
+    "killedby":["gun","silver bullet"],
+	"move":"false"
+  }
+  
+  ],
+  "player":{
+	"time":0,
+    "initialroom":"room1"
+  }
+}
+

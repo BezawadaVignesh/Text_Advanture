@@ -1,0 +1,233 @@
+{
+  "rooms":[
+  {
+    "id":"home",
+    "desc":"You are in your home you have given a mission to kill the 'voltmort' who is the leader of black world, this is only possible by you i know you can do it. Lets start your journey. There is a bridge to east, there is a godown to south, there is a village to west there is a corn field to north",
+    "e":"bridge",
+    "s":"godown",
+    "w":"small village",
+    "n":"corn field",
+    "obj":["godown key"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"godown",
+    "desc":"You are now in a godown. Collect some food which you need in your journey, go north to return to your home",
+    "e":"",
+    "s":"",
+    "w":"",
+    "n":"home",
+    "obj":["energy drink", "bread"],
+	"key":["godown key"],
+	"health":0
+  },
+  {
+    "id":"small village",
+    "desc":"It's a completely abandoned. There is a large village to south, a fort to west, a carrot field to north and go east to return to house",
+    "e":"home",
+    "s":"large village",
+    "w":"fort",
+    "n":"orchard",
+    "obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"bridge",
+    "desc":"You have just crossed the lake with help of the bridge. There is a desert to east, a forge to south, a big tree to north, go west to return to home.",
+    "e":"desert",
+    "s":"forge",
+    "w":"home",
+    "n":"big tree",
+    "obj":["boat"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"corn field",
+    "desc":"Go south to home, west to orchard",
+    "e":"",
+    "s":"home",
+    "w":"orchard",
+    "n":"",
+    "obj":["corn"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"large village",
+    "desc":"Once this village is filled with green fields and happy people but now no one is here. Any way samll village is towards your north.",
+    "e":"",
+    "s":"",
+    "w":"",
+    "n":"small village",
+    "obj":["money"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"fort",
+    "desc":"Now you are in a fort, better look around.And a magic room to north. Small village is towards your east",
+    "e":"small village",
+    "s":"",
+    "w":"",
+    "n":"magic room",
+    "obj":["sword"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"orchard",
+    "desc":"You are now in the orchard. There are full of apple tree here. Go east to go to corn field, and go south to small village",
+    "e":"corn field",
+    "s":"small village",
+    "w":"",
+    "n":"",
+    "obj":["apple"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"desert",
+    "desc":"Now you are in the desert. Be care full of monsters here take the gun and bullets down kill them, go east to temple, go north to mountain and go west to bridge",
+    "e":"temple",
+    "s":"",
+    "w":"bridge",
+    "n":"mountain",
+    "obj":["gun", "bullet"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"temple",
+    "desc":"Now you are in a temple. Take magic wand which will help you, go west to deseret",
+    "e":"",
+    "s":"",
+    "w":"desert",
+    "n":"",
+    "obj":["magic wand"],
+	"key":[],
+	"health":20
+  },
+  {
+    "id":"forge",
+    "desc":"Now you ar in a forge. look around for items, go north to go to bridge",
+    "e":"",
+    "s":"",
+    "w":"",
+    "n":"bridge",
+    "obj":["key"],
+	"key":["money"],
+	"health":0
+  },
+  {
+    "id":"big tree",
+    "desc":"There is big tree here.Go south to go to bridge",
+    "e":"",
+    "s":"bridge",
+    "w":"",
+    "n":"",
+    "obj":["posion apple"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"magic room",
+    "desc":"There is a fort to south.",
+    "e":"",
+    "s":"fort",
+    "w":"",
+    "n":"",
+    "obj":["portion"],
+	"key":["key"],
+	"health":0
+  },
+  {
+    "id":"mountain",
+    "desc":"Now you just crossed the mountain. It may effect your health.Go south to desert and go north to forest",
+    "e":"",
+    "s":"desert",
+    "w":"",
+    "n":"forest",
+    "obj":[],
+	"key":[],
+	"health":-30
+  },
+  {
+    "id":"forest",
+    "desc":"Now you are in a thick forest.Go south to go to mountain, and go north to lake.",
+    "e":"",
+    "s":"mountain",
+    "w":"",
+    "n":"lake",
+    "obj":["stick"],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"lake",
+    "desc":"You should now cross the lake go to west direction.Go south to enter forest.",
+    "e":"",
+    "s":"forest",
+    "w":"enemies fort",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+    "id":"enemies fort",
+    "desc":"Now it's time to kill the voltmort and free the world from his hands just do it.",
+    "e":"lake",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":0
+  }
+  ],
+  "ob":{
+  "gun":["It is not that good, but it definetly kill's.", "noteatable", -80, "noncon"],
+  "bullet":["They can be loded to gun, and kill enemies.", "noteatable", -30, "con"],
+  "apple":["It is an ordinery, it gives you instant energy.", "eatable", 30, "con"],
+  "magic wand":["blue", "noteatable",-80, "noncon"],
+  "portion":["green", "noteatable",-95, "con"],
+  "stick":["cat", "noteatable", "noncon"],
+  "key":["red", "noteatable", -60, "con"],
+  "sword":["Catkey", "noteatable", -75, "noncon"],
+  "godown key":["Key used to open godown", "noteatable", -50, "con"],
+  "bread":["Eat it to get energy", "eatable", 50, "con"],
+  "energy drink":["Gives instant energy", "eatable", 30, "con"],
+  "money":["Can be ysed for trading.","noteatable", -40, "con"],
+  "posion apple":["This is posiones it kills you just in secounds.Be care full.", "noteatable",-100, "con"],
+  "corn":["These are fress corn you can eat them", "eatable", 20, "con"]
+  },
+  "enemies":[
+  
+  {
+    "id":"snake",
+    "initialroom":"forest",
+    "killedby":["stick"],
+	"move":"false"
+  },
+  {
+    "id":"monsters",
+    "initialroom":"desert",
+    "killedby":["gun", "bullet"],
+	"move":"false"
+  },
+  {
+    "id":"voltmort",
+    "initialroom":"enemies fort",
+    "killedby":["magic wand","magic portion","sword"],
+	"move":"false"
+  }
+  ],
+  "player":{
+	"time":0,
+    "initialroom":"home"
+  }
+}
+

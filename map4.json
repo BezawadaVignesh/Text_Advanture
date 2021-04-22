@@ -1,0 +1,184 @@
+{
+"rooms":[
+	{
+	"id":"home",
+	"desc":"You are at your home and you are given a misson to kill 'momin' who is very cruel person, to save this world from his cruality. so start your misson. You have train standing to your west.",
+    "e":"",
+    "s":"",
+    "w":"train",
+    "n":"",
+    "obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"train",
+	"desc":"There is a train standing here, board the train to move to desired direction. There is a cave to your north, godown to your south and go east to return to home.",
+    "e":"",
+    "s":"godown",
+    "w":"",
+    "n":"cave",
+    "obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"cave",
+	"desc":"There is a map in this cave which guides you further, and a key to enter godown. There is a train to south.",
+	"e":"",
+	"s":"train",
+	"w":"",
+	"n":"",
+	"obj":["map", "godown key"],
+	"key":[],
+	"health":0
+  
+  },
+  {
+	"id":"godown",
+	"desc":"you are in the godown collect some food for some energy, according to your map there is a lake to the east.",
+	"e":"lake",
+	"s":"",
+	"w":"",
+	"n":"train",
+	"obj":["fruit", "energy drinks"],
+	"key":["godown key"],
+	"health":0
+  },
+  {
+	"id":"lake",
+	"desc":"You need to cross the lake and reach to forest on the other side which is in east direction.",
+	"e":"forest",
+	"s":"",
+	"w":"",
+	"n":"",
+	"obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"forest",
+	"desc":"you need to lose some energy while you go through this forest. Map says there is a hut when you go north. Due to bad weather ther",
+	"e":"",
+	"s":"",
+	"w":"",
+	"n":"hut",
+	"obj":[],
+	"key":[],
+	"health":-50
+  },
+  {
+	"id":"hut",
+	"desc":"Map says you are in a hut. You will go to a battle field if you go east, forest to south.",
+	"e":"battle field",
+	"s":"forest",
+	"w":"",
+	"n":"",
+	"obj":["weapon"],
+	"key":[],
+	"health":0
+  
+  },
+  {
+	"id":"battle field",
+	"desc":"Now you are in a battle field fight with your oponents who are slaves of 'momin' and finish them. Map says you will find a valley on going to north and hut on going to west.",
+	"e":"",
+	"s":"",
+	"w":"hut",
+	"n":"valley",
+	"obj":[],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"valley",
+	"desc":"come on cross this valley. You can get some food to eat if you go to east",
+	"e":"food storage",
+	"s":"battle field",
+	"w":"",
+	"n":"",
+	"obj":["weapons room key"],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"food storage",
+	"desc":"Take some food to gain energy. Map says there is a weapons room towards north.",
+	"e":"",
+	"s":"",
+	"w":"valley",
+	"n":"weapons room",
+	"obj":["food"],
+	"key":[],
+	"health":0
+  },
+  {
+	"id":"weapons room",
+	"desc":"Now you are in the weapons room. There are many weapons in this room but only one weapon can kill that 'momin'. That weapon can kill even the oponent is far away from us by aiming at him. So choose the weapon which is useful to you.",
+	"e":"snow mountain",
+	"s":"food storage",
+	"w":"",
+	"n":"",
+	"obj":["hammer", "sword", "bow and arrow"],
+	"key":["weapon room key"],
+	"health":0
+  
+  },
+  {
+	"id":"snow mountain",
+	"desc":"cross this mountain go to north to reach that momin fort",
+	"e":"",
+	"s":"",
+	"w":"weapons room",
+	"n":"momin fort",
+	"obj":[],
+	"key":[],
+	"health":0
+  
+  },
+  {
+	"id":"momin fort",
+	"desc":"Now finally you are in the momin fort. Kill that momin",
+	"e":"",
+	"s":"snow mountain",
+	"w":"",
+	"n":"",
+	"obj":[],
+	"key":[],
+	"health":0
+  }
+
+],
+"enemies":[
+	{
+		"id":"slaves",
+		"initialroom":"battle field",
+		"killedby":["weapon"],
+		"move":"false"
+	},
+	{
+		"id":"momin",
+		"initialroom":"momin fort",
+		"killedby":["bow and arrow"],
+		"move":"false"
+	}
+
+],
+"ob":{
+	"map":["It is used to guide us for direction", "noteatable", -10, "noncon"],
+    "fruit":["It is a fruit, it gives you instant energy.", "eatable", 30, "con"],
+    "weapon":["it is used to kill slaves", "noteatable", -75, "con"],
+    "godown key":["Key used to open godown", "noteatable", -50, "con"],
+    "food":["Eat it to get energy", "eatable", 50, "con"],
+    "energy drink":["Gives instant energy", "eatable", 30, "con"],
+    "bow and arrow":["Can be used to kill momin.","noteatable", -40, "con"],
+    "weapon room key":["can be used to open the weapon room.","noteatable", -40, "con"],
+    "hammer":["Can be used to kill momin.","noteatable", -40, "con", "con"],
+    "sword":["Can be used to kill momin.","noteatable", -40, "noncon"]
+  },
+	
+"player":{
+	"time":0,
+	"initialroom":"home"
+}
+}
