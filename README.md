@@ -1,7 +1,7 @@
 # Text_Advanture_Game
  This is a text advanture game written in c++.
 
-##AIM
+## AIM
  In this game the player need to find and kill all the enemies in the map to win the game. 
 ## DESCRIPTION
 - Initialy player has 100 health points, when the player lost all the health points he loses the game. Player loses his health on passing through some rooms, or when he try to kill an enemy with out required equipments, or eating some uneatable things. And to gain he has to consume food or some drinks.
