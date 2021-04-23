@@ -1,4 +1,5 @@
 # Text_Advanture_Game
+ This is a text advanture game written in c++.
 ##AIM
  In this game the player need to find and kill all the enemies in the map to win the game. 
 ## DESCRIPTION
@@ -23,7 +24,10 @@
 	- "save" this is used to save the game process.
 	
   ## HOW TO RUN
-  Even though this game is writen in four files main.cpp game.cpp sfunc.cpp player.h
-	it can be build an executable by command "g++ -std=c++14 main.cpp -o main" in both linux and windows, or type "make" in linux. 
+  
+  	- There is a main.exe file included you can run that or you can build the files by following method. 
+    	- To use json files in C++ I used json.hpp header file which you can get from [github.com/nlohmann/json/tree/develop/single_include/nlohmann](https://github.com/nlohmann/json/tree/develop/single_include/nlohmann). Downlode the file and copy it in the current directory.
+	- Now you can be build an executable by command "g++ -std=c++14 main.cpp -o main" in both linux and windows, or type "make" in linux.
+	````g++ -std=c++14 main.cpp -o main````
 	
 	
