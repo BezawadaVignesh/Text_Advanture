@@ -1,5 +1,6 @@
 # Text_Advanture_Game
  This is a text advanture game written in c++.
+
 ##AIM
  In this game the player need to find and kill all the enemies in the map to win the game. 
 ## DESCRIPTION
