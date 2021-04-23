@@ -13,12 +13,11 @@ string checkForOs()
 {
 	try{
 		if(system("clear")){
-			cout<<"l"<<endl;
-			return "linux";
+			system("cls");
+			return "windows";
 	}
 		else{
-			cout<<"w"<<endl;
-			return "windows";
+			return "linux";
 		}
 		}catch(...){};
 	return "";
